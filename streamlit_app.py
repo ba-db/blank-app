@@ -44,7 +44,6 @@ options = {
 
 page = st_navbar(
     pages,
-    logo_text=logo_text,
     styles=styles,
     options=options,
 )
