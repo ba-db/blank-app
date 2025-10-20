@@ -9,6 +9,7 @@ import pages as pg
 
 pages = ["Properties", "More data"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
+logo_path = os.path.join(parent_dir, "none")
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
@@ -41,6 +42,7 @@ options = {
 
 page = st_navbar(
     pages,
+    logo_path=logo_path,
     styles=styles,
     options=options,
 )
