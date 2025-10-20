@@ -9,7 +9,8 @@ import pages as pg
 
 pages = ["Properties", "More data"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
-logo_path = os.path.join(parent_dir)
+logo_text = "Melbourne Property Price Estimator"
+logo_path = None
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
@@ -40,12 +41,20 @@ options = {
     "show_menu": True,
 }
 
-page = st_navbar(
-    pages,
-    logo_path=logo_path,
-    styles=styles,
-    options=options,
-)
+col1, col2 = st.columns([1,4])
+with col1:
+    st.markdown(
+        f"<div style='font-size:20px; font-weight:600; color:#31333F; padding:8px 12px;'>{logo_text}</div>",
+        unsafe_allow_html=True,
+    )
+with col2:
+    page = st_navbar(
+        pages,
+        logo_path=logo_path,
+        styles=styles,
+        options=options,
+    )
+
 
 functions = {
     "Properties": pg.show_properties,
