@@ -15,15 +15,6 @@ parent_dir = os.path.dirname(os.path.abspath(__file__))
 
 logo_text = "Melbourne Property Price Estimator"
 
-svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="360" height="36" viewBox="0 0 360 36">
-  <style>
-    .title {{ font-family: Arial, Helvetica, sans-serif; font-size:16px; fill:#31333F; font-weight:600; }}
-  </style>
-  <text x="0" y="22" class="title">{logo_text}</text>
-</svg>'''
-svg_b64 = base64.b64encode(svg.encode("utf-8")).decode("utf-8")
-logo_path = f"data:image/svg+xml;base64,{svg_b64}"
-
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
@@ -52,13 +43,10 @@ styles = {
 }
 options = {
     "show_menu": True,
-    "default": pages[0],  # must be a string; ensures st_navbar can call .lower()
 }
 
 page = st_navbar(
     pages,
-    logo_path=logo_path,
-    logo_page=None,       # or set to pages[0] to make the logo clickable
     styles=styles,
     options=options,
 )
