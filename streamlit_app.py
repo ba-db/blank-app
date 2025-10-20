@@ -31,7 +31,6 @@ styles = {
 }
 options = {
     "show_menu": True,
-    "use_padding": True,
 }
 
 page = st_navbar(
