@@ -1,6 +1,6 @@
 
 import os
-
+import base64
 import streamlit as st
 from streamlit_navigation_bar import st_navbar
 
