@@ -1,6 +1,5 @@
 import streamlit as st
+from streamlit_navigation_bar import st_navbar
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
+st.write(page)
