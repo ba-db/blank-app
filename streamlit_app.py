@@ -7,7 +7,10 @@ from streamlit_navigation_bar import st_navbar
 import pages as pg
 
 
-pages = ["Properties", "More data"]
+pages = [
+    "🏠\nProperties",
+    "📈\nMore data"
+]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 
 logo_text = "Melbourne Property Price Estimator"
@@ -51,8 +54,8 @@ page = st_navbar(
 
 
 functions = {
-    "Properties": pg.show_properties,
-    "More data": pg.show_data,
+    "🏠\nProperties": pg.show_properties,
+    "📈\nMore data": pg.show_data,
 }
 go_to = functions.get(page)
 if go_to:
