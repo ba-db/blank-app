@@ -12,7 +12,7 @@ parent_dir = os.path.dirname(os.path.abspath(__file__))
 
 logo_text = "Melbourne Property Price Estimator"
 
-def make_text_svg(text, font_size=18, fill="#31333F", padding=8, height=40, width=400):
+def make_text_svg(text, font_size=24, fill="#31333F", padding=8, height=40, width=400):
     return f"""<svg xmlns='http://www.w3.org/2000/svg' width='{width}' height='{height}'>
   <rect width='100%' height='100%' fill='none'/>
   <text x='{padding}' y='{int(height*0.65)}' font-family='Inter, Arial, sans-serif' font-size='{font_size}' fill='{fill}' font-weight='600'>{text}</text>
