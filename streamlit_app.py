@@ -12,7 +12,7 @@ parent_dir = os.path.dirname(os.path.abspath(__file__))
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
-        "justify-content": "center",
+        "justify-content": "right",
         "padding-left": "0rem",
         "padding-right": "0rem",
     },
