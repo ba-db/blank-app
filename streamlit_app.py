@@ -15,6 +15,30 @@ parent_dir = os.path.dirname(os.path.abspath(__file__))
 
 logo_text = "Melbourne Property Price Estimator"
 
+st.markdown("""
+<style>
+/* Make the emoji icons larger, keep text normal */
+[data-testid="stHorizontalBlock"] ul li span {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    line-height: 1.2;
+    white-space: pre-line !important;
+    text-align: center !important;
+}
+
+/* Target the first line (emoji) and make it bigger */
+[data-testid="stHorizontalBlock"] ul li span::first-line {
+    font-size: 2rem;      /* increase this number for larger icons */
+}
+
+/* Optional: Add slight spacing between icon and text */
+[data-testid="stHorizontalBlock"] ul li span {
+    margin-top: 0.3rem;
+}
+</style>
+""", unsafe_allow_html=True)
+
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
