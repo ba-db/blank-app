@@ -52,6 +52,7 @@ styles = {
 }
 options = {
     "show_menu": True,
+    "default": pages[0],  # must be a string; ensures st_navbar can call .lower()
 }
 
 page = st_navbar(
@@ -61,9 +62,6 @@ page = st_navbar(
     styles=styles,
     options=options,
 )
-
-if page is None:
-    page = pages[0]  # default page if none selected
 
 
 
