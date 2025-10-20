@@ -13,8 +13,8 @@ styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
         "justify-content": "center",
-        "padding-left": "1rem",
-        "padding-right": "1rem",
+        "padding-left": "0rem",
+        "padding-right": "0rem",
     },
     "div": {
         "max-width": "32rem",
