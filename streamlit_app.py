@@ -11,11 +11,8 @@ pages = ["Properties", "More data"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 styles = {
     "nav": {
-        "background-color": "royalblue",
+        "background-color": "green",
         "justify-content": "right",
-    },
-    "img": {
-        "padding-right": "14px",
     },
     "span": {
         "color": "white",
@@ -25,7 +22,7 @@ styles = {
         "background-color": "white",
         "color": "var(--text-color)",
         "font-weight": "normal",
-        "padding": "14px",
+        "padding": "2px",
     }
 }
 options = {
