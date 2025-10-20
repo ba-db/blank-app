@@ -14,7 +14,7 @@ styles = {
         "background-color": "rgb(123, 209, 146)",
         "justify-content": "center",
         "padding-left": "1rem",
-        "padding-right": "2rem",
+        "padding-right": "1rem",
     },
     "div": {
         "max-width": "32rem",
