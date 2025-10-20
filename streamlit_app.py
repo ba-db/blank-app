@@ -57,9 +57,10 @@ options = {
 page = st_navbar(
     pages,
     logo_path=logo_path,
-    logo_page=None,
+    logo_page=None,       # or set to pages[0] to make the logo clickable
     styles=styles,
     options=options,
+    default=pages[0],
 )
 
 
