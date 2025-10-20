@@ -19,6 +19,9 @@ styles = {
     "div": {
         "max-width": "32rem",
     },
+    "ul": {
+        "justify-content": "right",
+    },
     "span": {
         "border-radius": "0.5rem",
         "color": "rgb(49, 51, 63)",
