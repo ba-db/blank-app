@@ -60,8 +60,10 @@ page = st_navbar(
     logo_page=None,       # or set to pages[0] to make the logo clickable
     styles=styles,
     options=options,
-    default=pages[0],
 )
+
+if page is None:
+    page = pages[0]  # default page if none selected
 
 
 
