@@ -11,19 +11,24 @@ pages = ["Properties", "More data"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 styles = {
     "nav": {
-        "background-color": "green",
+        "background-color": "rgb(123, 209, 146)",
         "justify-content": "right",
     },
+    "div": {
+        "max-width": "32rem",
+    },
     "span": {
-        "color": "white",
-        "padding": "2px",
+        "border-radius": "0.5rem",
+        "color": "rgb(49, 51, 63)",
+        "margin": "0 0.125rem",
+        "padding": "0.4375rem 0.625rem",
     },
     "active": {
-        "background-color": "white",
-        "color": "var(--text-color)",
-        "font-weight": "normal",
-        "padding": "14px",
-    }
+        "background-color": "rgba(255, 255, 255, 0.25)",
+    },
+    "hover": {
+        "background-color": "rgba(255, 255, 255, 0.35)",
+    },
 }
 options = {
     "show_menu": False,
