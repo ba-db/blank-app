@@ -13,7 +13,7 @@ pages = [
 ]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 
-logo_text = "Melbourne Property Price Estimator"
+logo_path = os.path.join(parent_dir, "logo.svg")
 
 styles = {
     "nav": {
@@ -47,6 +47,7 @@ options = {
 
 page = st_navbar(
     pages,
+    logo_path=logo_path,
     styles=styles,
     options=options,
 )
