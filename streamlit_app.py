@@ -7,9 +7,10 @@ import pages as pg
 pages = [("🏡 Properties", "Properties"), ("📊 More data", "More data")]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Set the logo text and styles for the navbar
+# Set the logo text
 logo_text = "Melbourne Property Price Estimator"
 
+# Styles for the navbar
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
@@ -17,19 +18,22 @@ styles = {
         "align-items": "center",
         "padding": "0.5rem",
     },
-    "title": {
-        "font-size": "1.5rem",
-        "color": "rgb(49, 51, 63)",
-        "margin-right": "auto",
+    "div": {
+        "max-width": "32rem",
     },
     "ul": {
         "display": "flex",
         "align-items": "center",
+        "list-style": "none",
+        "margin": "0",
+        "padding": "0",
+    },
+    "li": {
+        "margin": "0 1rem",
     },
     "span": {
         "border-radius": "0.5rem",
         "color": "rgb(49, 51, 63)",
-        "margin": "0 0.125rem",
         "padding": "0.4375rem 0.625rem",
     },
     "active": {
@@ -44,8 +48,8 @@ options = {
     "show_menu": True,
 }
 
-# Custom render for title and navbar in one row
-st.markdown(f"<div style='display: flex; align-items: center;'><h1 style='margin: 0;'>{logo_text}</h1></div>", unsafe_allow_html=True)
+# Display title above the navbar
+st.markdown(f"<h1 style='text-align: left; margin: 0;'>{logo_text}</h1>", unsafe_allow_html=True)
 
 # Create a navbar with icons
 page = st_navbar(
