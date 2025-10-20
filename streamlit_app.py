@@ -3,38 +3,41 @@ import streamlit as st
 from streamlit_navigation_bar import st_navbar
 import pages as pg
 
-# Define the pages and their associated functions
-pages = [("🏡 Properties", "Properties"), ("📊 More data", "More data")]
-parent_dir = os.path.dirname(os.path.abspath(__file__))
+# Pages with icons above text
+pages = [
+    "🏠\nProperties",
+    "📈\nMore data"
+]
 
-# Set the logo text
-logo_text = "Melbourne Property Price Estimator"
-
-# Styles for the navbar
+# Define styles
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
         "display": "flex",
         "align-items": "center",
-        "padding": "0.5rem",
+        "justify-content": "space-between",
+        "padding": "0.5rem 1rem",
     },
     "div": {
-        "max-width": "32rem",
-    },
-    "ul": {
         "display": "flex",
         "align-items": "center",
-        "list-style": "none",
-        "margin": "0",
-        "padding": "0",
+        "justify-content": "flex-end",
+        "flex-grow": "1",
     },
-    "li": {
-        "margin": "0 1rem",
+    "ul": {
+        "justify-content": "flex-end",
+        "flex-grow": "1",
+        "margin": "0",
     },
     "span": {
         "border-radius": "0.5rem",
         "color": "rgb(49, 51, 63)",
+        "margin": "0 0.25rem",
         "padding": "0.4375rem 0.625rem",
+        "text-align": "center",
+        "white-space": "pre-line",  # puts emoji above text
+        "font-size": "0.9rem",
+        "font-weight": "500",
     },
     "active": {
         "background-color": "rgba(255, 255, 255, 0.25)",
@@ -44,27 +47,45 @@ styles = {
     },
 }
 
-options = {
-    "show_menu": True,
+# Custom HTML to inject the title into the navbar
+title_html = """
+<style>
+.navbar-container {
+    background-color: rgb(123, 209, 146);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
 }
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(49, 51, 63);
+}
+</style>
+<div class="navbar-container">
+    <div class="navbar-title">Melbourne Property Price Estimator</div>
+    <div id="custom-nav"></div>
+</div>
+"""
 
-# Display title above the navbar
-st.markdown(f"<h1 style='text-align: left; margin: 0;'>{logo_text}</h1>", unsafe_allow_html=True)
+# Inject the title bar
+st.markdown(title_html, unsafe_allow_html=True)
 
-# Create a navbar with icons
+# Render the navigation bar aligned right (in the #custom-nav)
 page = st_navbar(
-    [name for icon, name in pages],
+    pages,
     styles=styles,
-    options=options,
+    key="navbar",
+    options={"show_menu": True},
 )
 
-# Map the page names to their respective functions
+# Map navigation to page functions
 functions = {
-    "Properties": pg.show_properties,
-    "More data": pg.show_data,
+    "🏠\nProperties": pg.show_properties,
+    "📈\nMore data": pg.show_data,
 }
 
-# Execute the function corresponding to the selected page
-go_to = functions.get(page)
-if go_to:
-    go_to()
+if page in functions:
+    functions[page]()
