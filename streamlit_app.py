@@ -22,7 +22,7 @@ styles = {
         "background-color": "white",
         "color": "var(--text-color)",
         "font-weight": "normal",
-        "padding": "2px",
+        "padding": "14px",
     }
 }
 options = {
