@@ -9,7 +9,7 @@ import pages as pg
 
 pages = ["Properties", "More data"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
-logo_path = os.path.join(parent_dir, "none")
+logo_path = os.path.join(parent_dir)
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
