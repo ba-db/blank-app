@@ -9,6 +9,9 @@ import pages as pg
 
 pages = ["Properties", "More data"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
+
+logo_text = "Melbourne Property Price Estimator"
+
 def make_text_svg(text, font_size=18, fill="#31333F", padding=8, height=40, width=400):
     return f"""<svg xmlns='http://www.w3.org/2000/svg' width='{width}' height='{height}'>
   <rect width='100%' height='100%' fill='none'/>
